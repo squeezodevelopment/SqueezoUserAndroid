@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Squeezo</string>
+    <string name="facebook_app_id">1013646385315313</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_intro">Intro</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_notification_settings">NotificationSettingsActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_outlet_listing">OutletListingActivity</string>
+    <string name="title_activity_outlet_details">OutletDetailsActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

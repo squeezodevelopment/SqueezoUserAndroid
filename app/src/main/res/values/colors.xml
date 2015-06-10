@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#f56e4e</color>
+    <color name="primaryColorDark">#d46b4c</color>
+    <color name="colorAccent">#F44336</color>
+    <color name="tabsScrollColor">#8a140e</color>
+
+    <color name="facebookColor">#3b5998</color>
+    <color name="googlePlusColor">#da4c3f</color>
+</resources>
