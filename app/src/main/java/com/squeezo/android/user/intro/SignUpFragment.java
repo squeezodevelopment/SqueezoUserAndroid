@@ -35,7 +35,7 @@ public class SignUpFragment extends android.support.v4.app.Fragment {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editName.getText().toString().length() == 0)
+                if (editName.getText().toString().length() == 0)
                     editName.setBackgroundResource(R.drawable.custom_edit_text_error);
                 else if (editEmail.getText().toString().length() == 0)
                     editEmail.setBackgroundResource(R.drawable.custom_edit_text_error);

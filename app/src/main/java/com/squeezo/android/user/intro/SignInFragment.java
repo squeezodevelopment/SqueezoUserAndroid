@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -45,6 +48,7 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
         GoogleApiClient.OnConnectionFailedListener {
 
     protected static final int RC_SIGN_IN = 0;
+    protected static String whichSocialSignIn;
     private final String TAG = "IntroActivity";
     private final String[] permission = {"public_profile", "email"};
     private JSONObject fbResponse;
@@ -53,13 +57,13 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
     private boolean mSignInClicked;
     private ConnectionResult mConnectionResult;
     private CallbackManager callbackManager;
-
-    protected static String whichSocialSignIn;
-
     private boolean fbLogin = false;
 
     private Context context;
     private Activity activity;
+
+    private FragmentManager manager;
+    private FragmentTransaction transaction;
 
     public SignInFragment() {
         // Required empty public constructor
@@ -81,21 +85,34 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
 
         FacebookSdk.sdkInitialize(getActivity());
         callbackManager = CallbackManager.Factory.create();
+        manager = getFragmentManager();
 
-        final EditText editEmail = (EditText) view.findViewById(R.id.editTextEmailRegister);
-        final EditText editPassword = (EditText) view.findViewById(R.id.editTextPasswordRegister);
+        final EditText editEmail = (EditText) view.findViewById(R.id.editTextEmailLogin);
+        final EditText editPassword = (EditText) view.findViewById(R.id.editTextPasswordLogin);
 
         Button btnLogin = (Button) view.findViewById(R.id.buttonLoginLogin);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editEmail.getText().toString().length() == 0)
+                if (editEmail.getText().toString().length() == 0)
                     editEmail.setBackgroundResource(R.drawable.custom_edit_text_error);
                 else if (editPassword.getText().toString().length() == 0)
                     editPassword.setBackgroundResource(R.drawable.custom_edit_text_error);
                 else
                     Toast.makeText(activity, "Login Successful", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        TextView txtForgotPassword = (TextView) view.findViewById(R.id.textViewForgotPasswordSignIn);
+        txtForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ForgotPasswordFragment fragment = new ForgotPasswordFragment();
+                transaction = manager.beginTransaction();
+                transaction.replace(R.id.relativeLayoutIntro, fragment, "forgotPasswordFragment");
+                transaction.addToBackStack("forgotPassword");
+                transaction.commit();
             }
         });
 
@@ -172,7 +189,7 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
             public void onClick(View v) {
                 whichSocialSignIn = "fb";
 
-                if(!fbLogin)
+                if (!fbLogin)
                     LoginManager.getInstance().logInWithReadPermissions(activity, Arrays.asList(permission));
                 else {
                     LoginManager.getInstance().logOut();
@@ -247,15 +264,14 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
         super.onActivityResult(reqCode, resCode, i);
 
 
-
         if (whichSocialSignIn.equals("fb")) {
-            Log.d("activity result frag fb", "req code = "+reqCode+" rescode = "+resCode);
+            Log.d("activity result frag fb", "req code = " + reqCode + " rescode = " + resCode);
             callbackManager.onActivityResult(reqCode, resCode, i);
         }
 
 
         if (reqCode == RC_SIGN_IN) {
-            Log.d("activity result frag gp", "req code = "+reqCode+" rescode = "+resCode);
+            Log.d("activity result frag gp", "req code = " + reqCode + " rescode = " + resCode);
             mIntentInProgress = false;
 
             if (!mGoogleApiClient.isConnecting()) {

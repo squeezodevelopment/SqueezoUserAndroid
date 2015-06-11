@@ -75,8 +75,7 @@
         android:inputType="textEmailAddress"
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingStart="15dp" />
+        android:paddingRight="15dp" />
 
     <EditText
         android:id="@+id/editTextPasswordLogin"
@@ -91,8 +90,7 @@
         android:inputType="textPassword"
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingStart="15dp" />
+        android:paddingRight="15dp" />
 
     <Button
         android:id="@+id/buttonLoginLogin"
