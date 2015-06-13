@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.squeezo.android.user.RegisterActivity">
+    tools:context="com.squeezo.android.user.RegisterActivity"
+    android:background="@color/bgColor">
 
     <RelativeLayout
         android:id="@+id/relativeLayoutRegister"
@@ -31,7 +32,7 @@
             android:paddingEnd="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:paddingStart="15dp" />
+            android:textColor="@color/textColor"/>
 
         <EditText
             android:id="@+id/editTextEmailRegister"
@@ -47,7 +48,7 @@
             android:paddingEnd="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:paddingStart="15dp" />
+            android:textColor="@color/textColor"/>
 
         <EditText
             android:id="@+id/editTextPasswordRegister"
@@ -63,7 +64,7 @@
             android:paddingEnd="1dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:paddingStart="15dp" />
+            android:textColor="@color/textColor"/>
 
         <View
             android:id="@+id/view"

@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
-    tools:context="com.squeezo.android.user.LoginActivity">
+    tools:context="com.squeezo.android.user.LoginActivity"
+    android:background="@color/bgColor">
 
     <ImageView
         android:id="@+id/imageViewLogoLogin"
@@ -75,7 +76,8 @@
         android:inputType="textEmailAddress"
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp" />
+        android:paddingRight="15dp"
+        android:textColor="@color/textColor"/>
 
     <EditText
         android:id="@+id/editTextPasswordLogin"
@@ -90,7 +92,8 @@
         android:inputType="textPassword"
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp" />
+        android:paddingRight="15dp"
+        android:textColor="@color/textColor"/>
 
     <Button
         android:id="@+id/buttonLoginLogin"
