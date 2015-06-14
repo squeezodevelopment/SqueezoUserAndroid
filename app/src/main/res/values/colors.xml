@@ -9,4 +9,5 @@
     <color name="googlePlusColor">#da4c3f</color>
     <color name="textColor">#9b9b9b</color>
     <color name="bgColor">#ededed</color>
+    <color name="darkGray">#505050</color>
 </resources>

@@ -11,6 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 
 import com.squeezo.android.user.intro.IntroActivity;
+import com.squeezo.android.user.main.MainActivity;
+import com.squeezo.android.user.notificationsSettings.NotificationSettingsActivity;
+import com.squeezo.android.user.outletListing.OutletListingActivity;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -57,10 +60,10 @@ public class SplashScreen extends AppCompatActivity {
                     // After 5 seconds redirect to another intent
 
                     if (!initiated) {
-                        Intent i = new Intent(SplashScreen.this, IntroActivity.class); //introactivity
+                        Intent i = new Intent(SplashScreen.this, OutletListingActivity.class); //introactivity
                         startActivity(i);
                     } else {
-                        Intent i = new Intent(SplashScreen.this, IntroActivity.class); //loginactivity
+                        Intent i = new Intent(SplashScreen.this, OutletListingActivity.class); //loginactivity
                         startActivity(i);
                     }
 

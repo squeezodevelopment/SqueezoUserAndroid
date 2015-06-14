@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.squeezo.android.user.R;
+import com.squeezo.android.user.SimpleDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ public class SqueezoDailyFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewDeals);
         DealsAdapter adapter = new DealsAdapter(getActivity(), getData());
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(getActivity()));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 

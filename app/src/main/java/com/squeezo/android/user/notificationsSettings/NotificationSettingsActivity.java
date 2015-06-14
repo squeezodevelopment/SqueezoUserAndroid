@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.squeezo.android.user.R;
+import com.squeezo.android.user.SimpleDividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +47,7 @@ public class NotificationSettingsActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerViewNotificationSettings);
         NotificationSettingsAdapter adapter = new NotificationSettingsAdapter(getApplicationContext(), getData());
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
     }
