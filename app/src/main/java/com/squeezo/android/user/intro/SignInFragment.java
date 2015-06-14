@@ -49,12 +49,11 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
 
     protected static final int RC_SIGN_IN = 0;
     protected static String whichSocialSignIn;
-    private final String TAG = "IntroActivity";
+    private final String TAG = "SignInFragment";
     private final String[] permission = {"public_profile", "email"};
     private JSONObject fbResponse;
     private GoogleApiClient mGoogleApiClient;
     private boolean mIntentInProgress;
-    private boolean mSignInClicked;
     private ConnectionResult mConnectionResult;
     private CallbackManager callbackManager;
     private boolean fbLogin = false;
@@ -127,7 +126,7 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
             @Override
             public void onClick(View v) {
 
-                whichSocialSignIn = "g_plus";
+                whichSocialSignIn = "gPlus";
 
                 if (mGoogleApiClient.isConnected()) {
                     Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
@@ -136,7 +135,7 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
                     revokeGooglePlusAccess();
                     Toast.makeText(activity, "Successfully logged out", Toast.LENGTH_SHORT).show();
                 } else
-                    signInWithGplus();
+                    signInWithGPlus();
             }
         });
 
@@ -219,9 +218,8 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
     /**
      * Sign-in into google
      */
-    private void signInWithGplus() {
+    private void signInWithGPlus() {
         if (!mGoogleApiClient.isConnecting()) {
-            mSignInClicked = true;
             resolveSignInError();
         }
     }
@@ -264,13 +262,13 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
         super.onActivityResult(reqCode, resCode, i);
 
 
-        if (whichSocialSignIn.equals("fb")) {
+        if (reqCode == 64206 && whichSocialSignIn.equals("fb")) {
             Log.d("activity result frag fb", "req code = " + reqCode + " rescode = " + resCode);
             callbackManager.onActivityResult(reqCode, resCode, i);
         }
 
 
-        if (reqCode == RC_SIGN_IN) {
+        if (reqCode == RC_SIGN_IN && whichSocialSignIn.equals("gPlus")) {
             Log.d("activity result frag gp", "req code = " + reqCode + " rescode = " + resCode);
             mIntentInProgress = false;
 
@@ -344,12 +342,12 @@ public class SignInFragment extends android.support.v4.app.Fragment implements G
             // Store the ConnectionResult for later usage
             mConnectionResult = connectionResult;
 
-            if (mSignInClicked) {
+            /*if (mSignInClicked) {
                 // The user has already clicked 'sign-in' so we attempt to
                 // resolve all
                 // errors until the user is signed in, or they cancel.
                 resolveSignInError();
-            }
+            }*/
         }
     }
 

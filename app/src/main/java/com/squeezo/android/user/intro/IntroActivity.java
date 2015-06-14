@@ -28,9 +28,9 @@ public class IntroActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        if (requestCode == SignInFragment.RC_SIGN_IN || requestCode == 64206) {
+        if (requestCode == SignInFragment.RC_SIGN_IN || requestCode == 64206) { //64206 is the requestCode of facebook
 
-            Log.d("activity result act gp", "req code = " + requestCode + " rescode = " + resultCode);
+            Log.d("activity result act", "req code = " + requestCode + " rescode = " + resultCode);
             SignInFragment fragment = (SignInFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.relativeLayoutIntro);
             fragment.onActivityResult(requestCode, resultCode, data);
