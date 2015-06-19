@@ -26,7 +26,7 @@ public class DealsAdapter extends RecyclerView.Adapter<DealsAdapter.MyViewHolder
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = layoutInflater.inflate(R.layout.deals_row, parent, false);
+        View view = layoutInflater.inflate(R.layout.row_deals, parent, false);
 
         return new MyViewHolder(view);
     }

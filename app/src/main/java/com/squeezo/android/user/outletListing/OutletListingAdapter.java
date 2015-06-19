@@ -31,7 +31,7 @@ public class OutletListingAdapter extends RecyclerView.Adapter<OutletListingAdap
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = layoutInflater.inflate(R.layout.outlet_listing_row, parent, false);
+        View view = layoutInflater.inflate(R.layout.row_outlet_listing, parent, false);
 
         return new MyViewHolder(view);
     }

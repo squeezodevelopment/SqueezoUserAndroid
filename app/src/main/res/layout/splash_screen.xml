@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fa8334"
     android:padding="@dimen/activity_vertical_margin"
-    tools:context=".SplashScreen"
-    android:background="#fa8334">
+    tools:context=".SplashScreen">
 
     <TextView
         android:id="@+id/textView4"

@@ -6,73 +6,73 @@
 
 
     <Button
+        android:id="@+id/buttonNameOutletListing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:id="@+id/buttonNameOutletListing"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Name" />
 
     <Button
+        android:id="@+id/buttonLocationOutletListing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Location"
-        android:id="@+id/buttonLocationOutletListing"
         android:layout_alignBottom="@+id/buttonNameOutletListing"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="Location" />
 
     <LinearLayout
-        android:layout_below="@+id/buttonLocationOutletListing"
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:weightSum="1"
+        android:layout_below="@+id/buttonLocationOutletListing"
         android:layout_marginTop="10dp"
-        android:id="@+id/linearLayout2">
+        android:weightSum="1">
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:id="@+id/imageViewOneOutletListing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".33"
-            android:id="@+id/imageViewOneOutletListing" />
+            android:src="@mipmap/ic_launcher" />
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:id="@+id/imageViewTwoOutletListing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".33"
-            android:id="@+id/imageViewTwoOutletListing" />
+            android:src="@mipmap/ic_launcher" />
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:id="@+id/imageViewThreeOutletListing"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight=".33"
-            android:id="@+id/imageViewThreeOutletListing" />
+            android:src="@mipmap/ic_launcher" />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Offers"
-        android:id="@+id/textView5"
-        android:layout_below="@+id/linearLayout2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout2"
         android:layout_marginTop="10dp"
-        android:textColor="#000000"/>
+        android:text="Offers"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
 
     <LinearLayout
-        android:layout_below="@+id/textView5"
+        android:id="@+id/linearLayoutOffersOutletListing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:id="@+id/linearLayoutOffersOutletListing"
         android:orientation="vertical">
 
     </LinearLayout>

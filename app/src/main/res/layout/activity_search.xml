@@ -9,49 +9,49 @@
         layout="@layout/toolbar_actionbar" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Discover Places"
-        android:id="@+id/textView3"
         android:layout_below="@+id/toolbar_actionbar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:text="Discover Places"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/editTextLocationSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextLocationSearch"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:inputType="textCapWords"
-        android:hint="location"/>
+        android:hint="location"
+        android:inputType="textCapWords" />
 
     <EditText
+        android:id="@+id/editTextSearchSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextSearchSearch"
         android:layout_below="@+id/editTextLocationSearch"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:inputType="text"
-        android:hint="outlet, cuisine"/>
+        android:hint="outlet, cuisine"
+        android:inputType="text" />
 
     <Button
+        android:id="@+id/buttonSearchSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search"
-        android:id="@+id/buttonSearchSearch"
         android:layout_below="@+id/editTextSearchSearch"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="Search" />
 
     <ListView
         android:id="@+id/listViewCategorySearch"
-        android:layout_below="@+id/buttonSearchSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"/>
+        android:layout_below="@+id/buttonSearchSearch"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>

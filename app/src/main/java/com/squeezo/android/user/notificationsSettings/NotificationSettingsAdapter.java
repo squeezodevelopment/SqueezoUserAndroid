@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -27,7 +28,7 @@ public class NotificationSettingsAdapter extends RecyclerView.Adapter<Notificati
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
 
-        View view = layoutInflater.inflate(R.layout.notification_setting_row, viewGroup, false);
+        View view = layoutInflater.inflate(R.layout.row_notification_setting, viewGroup, false);
 
         return new MyViewHolder(view);
     }
@@ -38,7 +39,6 @@ public class NotificationSettingsAdapter extends RecyclerView.Adapter<Notificati
 
 //        String imagePath = current.pictureAddress;
         holder.name.setText(current.name);
-        holder.location.setText(current.location);
 
         if (current.following)
             holder.following.setText("unfollow");
@@ -58,8 +58,7 @@ public class NotificationSettingsAdapter extends RecyclerView.Adapter<Notificati
 
         ImageView picture;
         TextView name;
-        TextView location;
-        TextView following;
+        Button following;
         Switch notification;
 
         public MyViewHolder(View itemView) {
@@ -67,8 +66,7 @@ public class NotificationSettingsAdapter extends RecyclerView.Adapter<Notificati
 
             picture = (ImageView) itemView.findViewById(R.id.imageViewPictureRow);
             name = (TextView) itemView.findViewById(R.id.textViewNameRow);
-            location = (TextView) itemView.findViewById(R.id.textViewLocationRow);
-            following = (TextView) itemView.findViewById(R.id.textViewFollowRow);
+            following = (Button) itemView.findViewById(R.id.buttonFollowRow);
             notification = (Switch) itemView.findViewById(R.id.switchRowNotification);
 
         }

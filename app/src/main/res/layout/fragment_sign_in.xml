@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColor"
     android:padding="40dp"
-    tools:context="com.squeezo.android.user.LoginActivity"
-    android:background="@color/bgColor">
+    tools:context="com.squeezo.android.user.LoginActivity">
 
     <ImageView
         android:id="@+id/imageViewLogoLogin"
@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:contentDescription="Logo"
         android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
@@ -77,7 +78,7 @@
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textColor="@color/textColor"/>
+        android:textColor="@color/textColor" />
 
     <EditText
         android:id="@+id/editTextPasswordLogin"
@@ -93,7 +94,7 @@
         android:paddingEnd="15dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:textColor="@color/textColor"/>
+        android:textColor="@color/textColor" />
 
     <Button
         android:id="@+id/buttonLoginLogin"
@@ -122,7 +123,8 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight=".5"
-            android:background="@drawable/custom_facebook_button"
+            android:background="@drawable/custom_button_facebook"
+            android:contentDescription="Facebook Login Button"
             android:src="@mipmap/btn_fb_normal" />
 
         <ImageButton
@@ -132,7 +134,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_weight=".5"
-            android:background="@drawable/custom_google_plus_button"
+            android:background="@drawable/custom_button_google_plus"
+            android:contentDescription="Google Plus Login Button"
             android:src="@mipmap/btn_g_normal" />
 
     </LinearLayout>

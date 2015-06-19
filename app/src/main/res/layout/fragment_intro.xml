@@ -42,8 +42,8 @@
             android:layout_weight=".5"
             android:background="@drawable/custom_button"
             android:text="Sign In"
-            android:textSize="17sp"
-            android:textColor="#ffffff"/>
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
 
         <Button
             android:id="@+id/buttonRegisterIntro"
@@ -54,8 +54,8 @@
             android:layout_weight=".5"
             android:background="@drawable/custom_button"
             android:text="Register"
-            android:textSize="17sp"
-            android:textColor="#ffffff"/>
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
 
     </LinearLayout>
 

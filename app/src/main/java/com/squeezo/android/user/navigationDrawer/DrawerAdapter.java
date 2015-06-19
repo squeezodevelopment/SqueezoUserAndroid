@@ -28,7 +28,7 @@ public class DrawerAdapter extends RecyclerView.Adapter<DrawerAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        return new MyViewHolder(layoutInflater.inflate(R.layout.drawer_row, parent, false));
+        return new MyViewHolder(layoutInflater.inflate(R.layout.row_drawer, parent, false));
     }
 
     @Override

@@ -45,7 +45,7 @@ public class CategoryAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.category_listing_row, null);
+            convertView = inflater.inflate(R.layout.row_category_listing, null);
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageViewCategorySearch);
 

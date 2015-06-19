@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="15dp"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textViewNameRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageViewPictureRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewNameRow"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Outlet Image"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textViewNotificationSetting"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:gravity="center"
+            android:text="Notification"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switchRowNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:checked="false" />
+
+        <Button
+            android:id="@+id/buttonFollowRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Follow"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

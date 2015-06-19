@@ -27,6 +27,7 @@
                 android:id="@+id/imageViewDeals"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:contentDescription="Outlet Picture"
                 android:src="@mipmap/ic_launcher" />
 
             <LinearLayout
